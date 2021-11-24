@@ -1,5 +1,4 @@
 
-
 h1 {
     text-align:center;
     font-family:'Merriweather', serif;
@@ -15,6 +14,15 @@ h2 {
     font-family:'Space Mono';
     margin-left: 70px;
     margin-right: 70px;
+}
+
+textarea {
+  color:#f25;
+  font-family:'Space Mono';
+}
+
+#gbtn {
+  font-family:'Space Mono';
 }
 
 h3, li, ul {
