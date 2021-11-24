@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+     <style>
+      textarea {
+  width: 300px;
+  height: 150px;
+}
+    </style>
+  </head>
+  <body>
+    <input type="text" id="input" value="">
+    <button onclick="guess()" id='gbtn'>Guess!</button>
+    <script>
+      let mnum = ~~(Math.random() * 100)
+      console.log(mnum)
+      function guess() {
+        let guess = document.getElementById('input').value
+        
+        if (!isNaN(guess)) { 
+          if (parseInt(guess) == mnum) {
+            document.getElementById('guesses').innerHTML += "\nYou win\nRefresh the page (F5) to play again."
+            document.getElementById('gbtn').disabled = true
+          } else {
+                document.getElementById('guesses').innerHTML += `\nYou guessed ${guess}. ${guess > mnum ? "Lower" : "Higher"}`
+          }
+        } else {
+         alert('Not a number.')
+        }
+        document.getElementById('input').value = ""
+      }
+    </script>
+    <textarea id="guesses" readonly>
+      Your guesses:
+    </textarea>
+  </body>
+</html>
